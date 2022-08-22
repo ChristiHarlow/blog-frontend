@@ -39,7 +39,7 @@ const CreateAccount = () => {
 
     return (
         <div>
-            <h1>Login</h1>
+            <h1>Create Account</h1>
             <form onSubmit={login}>
                 <div className="mb-3">
                     <label htmlFor="username" className="form-label">
