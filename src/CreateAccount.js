@@ -1,8 +1,8 @@
 import { useState } from "react";
 import APIUrl from "./APIUrl";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-const Login = () => {
+const CreateAccount = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
@@ -71,12 +71,11 @@ const Login = () => {
                 </div>
                 <p style={{ color: "red" }}>{error}</p>
                 <button type="submit" className="btn btn-primary">
-                    Login
+                    Create Account
                 </button>
-                <Link to="/createAccount">Create New Account</Link>
             </form>
         </div>
     );
 };
 
-export default Login;
+export default CreateAccount;
