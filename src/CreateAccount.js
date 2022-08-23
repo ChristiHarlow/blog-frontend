@@ -12,7 +12,7 @@ const CreateAccount = () => {
         evt.preventDefault();
 
         try {
-            const response = await fetch(`${APIUrl}/login`, {
+            const response = await fetch(`${APIUrl}/createAccount`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -29,7 +29,7 @@ const CreateAccount = () => {
                 setError(data.error);
             } else {
                 //redirect to next screen here, login was succcessful
-                navigate("/admin");
+                navigate("/login?newUser=true");
             }
         } catch (error) {
             setError("Login API call failed. Check console for more details.");
