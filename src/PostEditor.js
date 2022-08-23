@@ -24,7 +24,7 @@ const PostEditor = () => {
         evt.preventDefault();
 
         if (params.id === "new") {
-            const response = await fetch(`${APIUrl}/post`, {
+            await fetch(`${APIUrl}/post`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
