@@ -1,12 +1,15 @@
 import { useState } from "react";
 import APIUrl from "./APIUrl";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 
 const Login = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
     const navigate = useNavigate();
+    const [searchParams] = useSearchParams();
+
+    const isNewUser = searchParams.get("newUser");
 
     const login = async (evt) => {
         evt.preventDefault();
